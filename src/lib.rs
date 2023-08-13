@@ -5,6 +5,7 @@
 #[cfg(test)]
 mod tests;
 
+pub mod cml;
 pub mod mlton;
 pub mod mlyacc_lib;
 pub mod sml_of_nj;
