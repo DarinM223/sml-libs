@@ -31,4 +31,4 @@ end
 functor Hash2TableFn (
   structure Key1 : HASH_KEY
   structure Key2 : HASH_KEY
-) : MONO_HASH2_TABLE = struct end
+) : MONO_HASH2_TABLE where Key1 = Key1 and Key2 = Key2 = struct end

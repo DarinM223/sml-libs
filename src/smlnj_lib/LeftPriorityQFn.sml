@@ -21,4 +21,4 @@ signature MONO_PRIORITYQ = sig
   val isEmpty : queue -> bool
 end
 
-functor LeftPriorityQFn (P : PRIORITY) : MONO_PRIORITYQ = struct end
+functor LeftPriorityQFn (P : PRIORITY) : MONO_PRIORITYQ where type item = P.item = struct end

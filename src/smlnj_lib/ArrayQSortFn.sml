@@ -4,4 +4,4 @@ signature MONO_ARRAY_SORT = sig
   val sorted : (A.elem * A.elem -> order) -> A.array -> bool
 end
 
-functor ArrayQSortFn (A : MONO_ARRAY) : MONO_ARRAY_SORT = struct end
+functor ArrayQSortFn (A : MONO_ARRAY) : MONO_ARRAY_SORT where A = A = struct end

@@ -4,4 +4,4 @@ signature XML_PARSER = sig
   exception ParseError of string
 end
 
-functor XMLParserFn (XT : XML_TREE) : XML_PARSER = struct end
+functor XMLParserFn (XT : XML_TREE) : XML_PARSER where XMLTree = XT = struct end

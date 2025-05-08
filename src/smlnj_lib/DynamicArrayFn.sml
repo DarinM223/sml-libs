@@ -13,4 +13,4 @@ signature MONO_DYNAMIC_ARRAY = sig
   val truncate : array * int -> unit
 end
 
-functor DynamicArrayFn (A : MONO_ARRAY) : MONO_DYNAMIC_ARRAY = struct end
+functor DynamicArrayFn (A : MONO_ARRAY) : MONO_DYNAMIC_ARRAY where type elem = A.elem and type array = A.array = struct end

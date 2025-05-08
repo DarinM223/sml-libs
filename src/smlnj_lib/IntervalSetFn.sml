@@ -36,4 +36,4 @@ signature INTERVAL_SET = sig
   val isSubset : set * set -> bool
 end
 
-functor IntervalSetFn (D : INTERVAL_DOMAIN) : INTERVAL_SET = struct end
+functor IntervalSetFn (D : INTERVAL_DOMAIN) : INTERVAL_SET where D = D = struct end
