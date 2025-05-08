@@ -30,4 +30,4 @@ signature MONO_HASH_SET = sig
   val without : set * item -> unit
 end
 
-functor HashSetFn (Key : HASH_KEY) : MONO_HASH_SET = struct end
+functor HashSetFn (Key : HASH_KEY) : MONO_HASH_SET where Key = Key = struct end
