@@ -4,9 +4,12 @@ signature MONO_HASH_TABLE = sig
   val mkTable : (int * exn) -> 'a hash_table
   val clear : 'a hash_table -> unit
   val insert : 'a hash_table -> (Key.hash_key * 'a) -> unit
+  val insertWith : ('a * 'a -> 'a) -> 'a hash_table -> Key.hash_key * 'a -> unit
+  val insertWithi : (Key.hash_key * 'a * 'a -> 'a) -> 'a hash_table -> Key.hash_key * 'a -> unit
   val inDomain : 'a hash_table -> Key.hash_key -> bool
   val lookup : 'a hash_table -> Key.hash_key -> 'a
   val find : 'a hash_table -> Key.hash_key -> 'a option
+  val findAndRemove : 'a hash_table -> Key.hash_key -> 'a option
   val remove : 'a hash_table -> Key.hash_key -> 'a
   val numItems : 'a hash_table -> int
   val listItems : 'a hash_table -> 'a list
