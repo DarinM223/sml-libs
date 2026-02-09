@@ -140,6 +140,9 @@ structure WordVector :> MONO_VECTOR (* OPTIONAL *)
 structure RealVector :> MONO_VECTOR (* OPTIONAL *)
   where type elem = real = struct end
 
+structure Real64Vector :> MONO_VECTOR (* OPTIONAL *)
+  where type elem = Real64.real = struct end
+
 structure LargeIntVector :> MONO_VECTOR (* OPTIONAL *)
   where type elem = LargeInt.int = struct end
 

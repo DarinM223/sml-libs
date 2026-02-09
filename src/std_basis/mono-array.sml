@@ -172,6 +172,10 @@ structure RealArray :> MONO_ARRAY (* OPTIONAL *)
   where type vector = RealVector.vector
   where type elem = real = struct end
 
+structure Real64Array :> MONO_ARRAY (* OPTIONAL *)
+  where type vector = Real64Vector.vector
+  where type elem = Real64.real = struct end
+
 structure LargeIntArray :> MONO_ARRAY (* OPTIONAL *)
   where type vector = LargeIntVector.vector
   where type elem = LargeInt.int = struct end
